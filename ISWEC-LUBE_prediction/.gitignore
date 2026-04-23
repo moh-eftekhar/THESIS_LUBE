@@ -113,3 +113,7 @@ $RECYCLE.BIN/
 *.swp
 *.swo
 ~$*
+*.pdf
+*.md
+saved_models/*.pth
+saved_models/*.pkl
