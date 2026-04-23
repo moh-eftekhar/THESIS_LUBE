@@ -43,7 +43,7 @@ DATASET_NAME = 'simulation_150days'
 ALPHAS = [0.025, 0.05, 0.10]   # 0.025 -> 97.5% PI | 0.05 -> 95% PI | 0.10 -> 90% PI
 
 # ── Pipeline switches ─────────────────────────────────────────────────────────
-RUN_TUNING   = False   # True only for MLP; set False for LSTM (use KDE params)
+RUN_TUNING   = False   # Skipped for LSTM -- parameters read from KDE .h5 file
 RUN_TRAINING = True    # train model for each alpha in ALPHAS
 RUN_TESTING  = True    # evaluate on held-out PI-Test set
 

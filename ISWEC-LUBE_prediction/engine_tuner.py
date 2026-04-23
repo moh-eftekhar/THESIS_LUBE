@@ -98,7 +98,7 @@ def train_one_config(config, train_scaled, test_scaled):
     X_train, y_train       = make_windows(train_scaled, n_in, n_out)
     X_test_all, y_test_all = make_windows(test_scaled,  n_in, n_out)
     split    = len(X_test_all) // 2
-    X_pi_val = X_test_all[:split];  y_pi_val = y_test_all[:split]
+    X_pi_val = X_test_all[split:];  y_pi_val = y_test_all[split:]   # second 50% = PI-Val
 
     model = MLP(num_neurons=config['num_neurons'], input_window_size=n_in,
                 predicted_step=n_out).to(device)
