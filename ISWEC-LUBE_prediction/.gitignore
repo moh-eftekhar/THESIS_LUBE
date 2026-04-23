@@ -1,0 +1,115 @@
+# ============================================================
+#  ISWEC-LUBE Prediction Project — .gitignore
+# ============================================================
+
+# ----------------------------------------------------------
+# Python
+# ----------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# MyPy / type checkers
+.mypy_cache/
+.dmypy.json
+
+# ----------------------------------------------------------
+# Machine Learning — models & artifacts
+# ----------------------------------------------------------
+# PyTorch model weights
+saved_models/*.pth
+
+# Keras / TensorFlow model files
+*.h5
+*.keras
+*.pb
+saved_model/
+
+# Scikit-learn / generic pickle artifacts
+*.pkl
+*.pickle
+
+# Hyperparameter tuning results
+tuning_results/
+
+# TensorBoard logs
+runs/
+logs/
+lightning_logs/
+
+# ----------------------------------------------------------
+# Dataset & large data files
+# ----------------------------------------------------------
+dataset/*.csv
+dataset/*.parquet
+dataset/*.feather
+dataset/*.hdf5
+dataset/*.nc
+
+# Keep the directory itself tracked
+!dataset/.gitkeep
+
+# ----------------------------------------------------------
+# Output figures (generated; not source)
+# ----------------------------------------------------------
+figures/
+
+# ----------------------------------------------------------
+# OS / editor artifacts
+# ----------------------------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains / PyCharm
+.idea/
+*.iml
+
+# Spyder
+.spyderproject.db
+.spyproject/
+
+# ----------------------------------------------------------
+# Miscellaneous
+# ----------------------------------------------------------
+*.tmp
+*.bak
+*.swp
+*.swo
+~$*
