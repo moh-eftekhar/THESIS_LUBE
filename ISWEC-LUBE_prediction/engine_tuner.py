@@ -125,6 +125,8 @@ def train_one_config(config, train_scaled, test_scaled):
             s, e    = batch * batch_size, (batch + 1) * batch_size
             inputs  = torch.tensor(x_tr[s:e], dtype=torch.float).to(device)
             targets = torch.tensor(y_tr[s:e], dtype=torch.float).to(device)
+            if inputs.size(0) <= 1:   # skip last batch if only 1 sample (BatchNorm needs >1)
+                continue
             grads, scale = {}, {}
             for i in range(2):
                 optimizer.zero_grad()
@@ -303,7 +305,7 @@ def run_tuning():
         f"Winkler : {best['winkler']:.4f}",
         "=" * 50,
         "",
-        "Paste into 02_run_pipeline.py → BEST_PARAMS:",
+        "Paste into 02_run_pipeline_MLP.py -> BEST_PARAMS:",
         "",
         "BEST_PARAMS = {",
         f"    'input_window_size' : {int(best['input_window_size'])},",
@@ -313,7 +315,7 @@ def run_tuning():
         f"    'batch_size'        : {int(best['batch_size'])},",
         "}",
     ]
-    with open(best_path, 'w') as f:
+    with open(best_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
     for l in lines: print(' ', l)
 

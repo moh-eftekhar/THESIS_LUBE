@@ -39,7 +39,7 @@ PREDICTED_STEP = 16
 ALPHAS = [0.025, 0.05, 0.10]      # 0.025 -> 97.5% PI | 0.05 -> 95% PI | 0.10 -> 90% PI
 
 # ── Pipeline switches ─────────────────────────────────────────────────────────
-RUN_TUNING   = True    # run grid search to find best MLP hyperparameters
+RUN_TUNING   = False    # run grid search to find best MLP hyperparameters
 RUN_TRAINING = True    # train MLP for each alpha in ALPHAS
 RUN_TESTING  = True    # evaluate on held-out PI-Test set
 
@@ -47,17 +47,17 @@ RUN_TESTING  = True    # evaluate on held-out PI-Test set
 # Fill these in from a previous tuning run to skip the grid search entirely.
 BEST_PARAMS = {
     'input_window_size' : 24,      # past timesteps as input (24 steps = 6 h)
-    'num_neurons'       : 64,      # MLP hidden layer width
-    'lambda1_'          : 0.001,   # QD loss penalty obj.1
-    'lambda2_'          : 0.0008,  # QD loss penalty obj.2
+    'num_neurons'       : 32,      # MLP hidden layer width
+    'lambda1_'          : 0.005,   # QD loss penalty obj.1
+    'lambda2_'          : 0.0004,  # QD loss penalty obj.2
     'batch_size'        : 128,
 }
 
 # ── Fixed training settings ───────────────────────────────────────────────────
 NUM_EPOCH    = 100     # maximum epochs (early stopping may halt sooner)
 PATIENCE     = 20      # early stopping patience in epochs
-LAMBDA1      = 0.001
-LAMBDA2      = 0.0008
+LAMBDA1      = 0.005
+LAMBDA2      = 0.0004
 BATCH_SIZE   = 128
 
 # ── Test visualisation settings ───────────────────────────────────────────────
