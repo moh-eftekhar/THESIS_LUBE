@@ -118,3 +118,4 @@ $RECYCLE.BIN/
 saved_models/*.pth
 saved_models/*.pkl
 .h5
+*.docx

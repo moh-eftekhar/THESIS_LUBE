@@ -1,0 +1,690 @@
+[
+  {
+    "pred_hor": 1,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1005.9,
+        "upper_limit": 1075.5,
+        "PICP_testSet": 100.0,
+        "pinaw_testSet": 0.0546853319,
+        "ACE_testSet": 0.025,
+        "Winkler_testSet": 0.054685,
+        "PICP_piEvalSet": 99.4378,
+        "pinaw_piEvalSet": 0.0613854229
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -823.8,
+        "upper_limit": 993.7,
+        "PICP_testSet": 99.789,
+        "pinaw_testSet": 0.0477526374,
+        "ACE_testSet": 0.04789,
+        "Winkler_testSet": 0.048033,
+        "PICP_piEvalSet": 98.1729,
+        "pinaw_piEvalSet": 0.053018637
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -644.4,
+        "upper_limit": 760.6,
+        "PICP_testSet": 98.6639,
+        "pinaw_testSet": 0.0369158648,
+        "ACE_testSet": 0.086639,
+        "Winkler_testSet": 0.038648,
+        "PICP_piEvalSet": 96.4863,
+        "pinaw_piEvalSet": 0.0414349213
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 2,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -967.9,
+        "upper_limit": 1115.4,
+        "PICP_testSet": 99.8594,
+        "pinaw_testSet": 0.0547342487,
+        "ACE_testSet": 0.023594,
+        "Winkler_testSet": 0.054823,
+        "PICP_piEvalSet": 99.227,
+        "pinaw_piEvalSet": 0.0618588738
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -801.6,
+        "upper_limit": 952.6,
+        "PICP_testSet": 99.5781,
+        "pinaw_testSet": 0.046088554,
+        "ACE_testSet": 0.045781,
+        "Winkler_testSet": 0.046788,
+        "PICP_piEvalSet": 98.5945,
+        "pinaw_piEvalSet": 0.0514698885
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -613.0,
+        "upper_limit": 722.8,
+        "PICP_testSet": 98.9451,
+        "pinaw_testSet": 0.0350956023,
+        "ACE_testSet": 0.089451,
+        "Winkler_testSet": 0.036511,
+        "PICP_piEvalSet": 96.9079,
+        "pinaw_piEvalSet": 0.039625369
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 3,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -979.6,
+        "upper_limit": 1133.5,
+        "PICP_testSet": 99.9297,
+        "pinaw_testSet": 0.055517558,
+        "ACE_testSet": 0.024297,
+        "Winkler_testSet": 0.055663,
+        "PICP_piEvalSet": 99.0162,
+        "pinaw_piEvalSet": 0.0619063228
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -832.4,
+        "upper_limit": 978.1,
+        "PICP_testSet": 99.7187,
+        "pinaw_testSet": 0.0475663655,
+        "ACE_testSet": 0.047187,
+        "Winkler_testSet": 0.04794,
+        "PICP_piEvalSet": 98.5242,
+        "pinaw_piEvalSet": 0.052583348
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -649.8,
+        "upper_limit": 747.7,
+        "PICP_testSet": 99.0155,
+        "pinaw_testSet": 0.0367167182,
+        "ACE_testSet": 0.090155,
+        "Winkler_testSet": 0.037979,
+        "PICP_piEvalSet": 96.6268,
+        "pinaw_piEvalSet": 0.0412289649
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 4,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -972.0,
+        "upper_limit": 1170.1,
+        "PICP_testSet": 99.7187,
+        "pinaw_testSet": 0.0562813357,
+        "ACE_testSet": 0.022187,
+        "Winkler_testSet": 0.057068,
+        "PICP_piEvalSet": 99.227,
+        "pinaw_piEvalSet": 0.0628237873
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -836.4,
+        "upper_limit": 1017.6,
+        "PICP_testSet": 99.7187,
+        "pinaw_testSet": 0.0487116948,
+        "ACE_testSet": 0.047187,
+        "Winkler_testSet": 0.049622,
+        "PICP_piEvalSet": 98.5242,
+        "pinaw_piEvalSet": 0.0541362315
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -660.8,
+        "upper_limit": 702.2,
+        "PICP_testSet": 98.5935,
+        "pinaw_testSet": 0.0358081833,
+        "ACE_testSet": 0.085935,
+        "Winkler_testSet": 0.037769,
+        "PICP_piEvalSet": 96.2755,
+        "pinaw_piEvalSet": 0.039773304
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 5,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -937.9,
+        "upper_limit": 1206.3,
+        "PICP_testSet": 99.6484,
+        "pinaw_testSet": 0.0563351102,
+        "ACE_testSet": 0.021484,
+        "Winkler_testSet": 0.057941,
+        "PICP_piEvalSet": 98.9459,
+        "pinaw_piEvalSet": 0.0636286438
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -828.5,
+        "upper_limit": 1035.0,
+        "PICP_testSet": 99.4374,
+        "pinaw_testSet": 0.0489603467,
+        "ACE_testSet": 0.044374,
+        "Winkler_testSet": 0.050706,
+        "PICP_piEvalSet": 98.454,
+        "pinaw_piEvalSet": 0.055225268
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -630.7,
+        "upper_limit": 730.2,
+        "PICP_testSet": 98.8748,
+        "pinaw_testSet": 0.0357547402,
+        "ACE_testSet": 0.088748,
+        "Winkler_testSet": 0.038212,
+        "PICP_piEvalSet": 96.416,
+        "pinaw_piEvalSet": 0.0403329432
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 6,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -965.2,
+        "upper_limit": 1232.9,
+        "PICP_testSet": 99.6484,
+        "pinaw_testSet": 0.0577513836,
+        "ACE_testSet": 0.021484,
+        "Winkler_testSet": 0.059685,
+        "PICP_piEvalSet": 99.0162,
+        "pinaw_piEvalSet": 0.0656884462
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -778.3,
+        "upper_limit": 1011.6,
+        "PICP_testSet": 99.0155,
+        "pinaw_testSet": 0.0470267944,
+        "ACE_testSet": 0.040155,
+        "Winkler_testSet": 0.050529,
+        "PICP_piEvalSet": 97.5404,
+        "pinaw_piEvalSet": 0.0528474711
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -655.0,
+        "upper_limit": 729.1,
+        "PICP_testSet": 97.8903,
+        "pinaw_testSet": 0.0363650545,
+        "ACE_testSet": 0.078903,
+        "Winkler_testSet": 0.039761,
+        "PICP_piEvalSet": 95.2916,
+        "pinaw_piEvalSet": 0.0408447124
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 7,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -943.6,
+        "upper_limit": 1267.4,
+        "PICP_testSet": 99.6484,
+        "pinaw_testSet": 0.0580894388,
+        "ACE_testSet": 0.021484,
+        "Winkler_testSet": 0.059872,
+        "PICP_piEvalSet": 98.8053,
+        "pinaw_piEvalSet": 0.0660939664
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -818.0,
+        "upper_limit": 1021.4,
+        "PICP_testSet": 99.2968,
+        "pinaw_testSet": 0.0483269244,
+        "ACE_testSet": 0.042968,
+        "Winkler_testSet": 0.051953,
+        "PICP_piEvalSet": 97.189,
+        "pinaw_piEvalSet": 0.0543066896
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -693.2,
+        "upper_limit": 732.1,
+        "PICP_testSet": 98.1013,
+        "pinaw_testSet": 0.0374465771,
+        "ACE_testSet": 0.081013,
+        "Winkler_testSet": 0.041483,
+        "PICP_piEvalSet": 95.0105,
+        "pinaw_piEvalSet": 0.0420859642
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 8,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -979.9,
+        "upper_limit": 1241.7,
+        "PICP_testSet": 99.4374,
+        "pinaw_testSet": 0.0583686866,
+        "ACE_testSet": 0.019374,
+        "Winkler_testSet": 0.064371,
+        "PICP_piEvalSet": 98.0323,
+        "pinaw_piEvalSet": 0.0662534982
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -823.8,
+        "upper_limit": 1042.2,
+        "PICP_testSet": 98.8748,
+        "pinaw_testSet": 0.0490246005,
+        "ACE_testSet": 0.038748,
+        "Winkler_testSet": 0.05468,
+        "PICP_piEvalSet": 96.7674,
+        "pinaw_piEvalSet": 0.0551697239
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -712.8,
+        "upper_limit": 720.4,
+        "PICP_testSet": 97.609,
+        "pinaw_testSet": 0.0376548171,
+        "ACE_testSet": 0.07609,
+        "Winkler_testSet": 0.043473,
+        "PICP_piEvalSet": 94.5889,
+        "pinaw_piEvalSet": 0.0423869863
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 9,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1032.0,
+        "upper_limit": 1276.1,
+        "PICP_testSet": 99.2968,
+        "pinaw_testSet": 0.060641747,
+        "ACE_testSet": 0.017968,
+        "Winkler_testSet": 0.068848,
+        "PICP_piEvalSet": 98.0323,
+        "pinaw_piEvalSet": 0.0682127252
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -853.2,
+        "upper_limit": 1064.3,
+        "PICP_testSet": 99.0155,
+        "pinaw_testSet": 0.0503797308,
+        "ACE_testSet": 0.040155,
+        "Winkler_testSet": 0.057598,
+        "PICP_piEvalSet": 96.2052,
+        "pinaw_piEvalSet": 0.0570090003
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -707.9,
+        "upper_limit": 765.0,
+        "PICP_testSet": 97.82,
+        "pinaw_testSet": 0.0386986323,
+        "ACE_testSet": 0.0782,
+        "Winkler_testSet": 0.044635,
+        "PICP_piEvalSet": 94.097,
+        "pinaw_piEvalSet": 0.0435008965
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 10,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -998.7,
+        "upper_limit": 1285.0,
+        "PICP_testSet": 99.2264,
+        "pinaw_testSet": 0.0599987432,
+        "ACE_testSet": 0.017264,
+        "Winkler_testSet": 0.068184,
+        "PICP_piEvalSet": 97.6107,
+        "pinaw_piEvalSet": 0.0679816455
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -931.9,
+        "upper_limit": 1021.6,
+        "PICP_testSet": 98.7342,
+        "pinaw_testSet": 0.0513249114,
+        "ACE_testSet": 0.037342,
+        "Winkler_testSet": 0.059883,
+        "PICP_piEvalSet": 95.0105,
+        "pinaw_piEvalSet": 0.0580605008
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -778.5,
+        "upper_limit": 706.7,
+        "PICP_testSet": 97.3277,
+        "pinaw_testSet": 0.0390207693,
+        "ACE_testSet": 0.073277,
+        "Winkler_testSet": 0.047855,
+        "PICP_piEvalSet": 91.7077,
+        "pinaw_piEvalSet": 0.0435610376
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 11,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1060.1,
+        "upper_limit": 1287.0,
+        "PICP_testSet": 98.9451,
+        "pinaw_testSet": 0.0616665594,
+        "ACE_testSet": 0.014451,
+        "Winkler_testSet": 0.071815,
+        "PICP_piEvalSet": 97.2593,
+        "pinaw_piEvalSet": 0.0698654503
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -866.7,
+        "upper_limit": 1024.0,
+        "PICP_testSet": 98.3122,
+        "pinaw_testSet": 0.0496745817,
+        "ACE_testSet": 0.033122,
+        "Winkler_testSet": 0.062241,
+        "PICP_piEvalSet": 94.097,
+        "pinaw_piEvalSet": 0.0558591075
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -761.4,
+        "upper_limit": 704.9,
+        "PICP_testSet": 95.8509,
+        "pinaw_testSet": 0.0385255776,
+        "ACE_testSet": 0.058509,
+        "Winkler_testSet": 0.050738,
+        "PICP_piEvalSet": 91.0752,
+        "pinaw_piEvalSet": 0.0433372781
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 12,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1040.7,
+        "upper_limit": 1283.6,
+        "PICP_testSet": 99.1561,
+        "pinaw_testSet": 0.0610663593,
+        "ACE_testSet": 0.016561,
+        "Winkler_testSet": 0.075057,
+        "PICP_piEvalSet": 96.3457,
+        "pinaw_piEvalSet": 0.0699049085
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -978.9,
+        "upper_limit": 987.1,
+        "PICP_testSet": 98.0309,
+        "pinaw_testSet": 0.051653184,
+        "ACE_testSet": 0.030309,
+        "Winkler_testSet": 0.06707,
+        "PICP_piEvalSet": 93.7456,
+        "pinaw_piEvalSet": 0.0581545644
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -780.6,
+        "upper_limit": 739.6,
+        "PICP_testSet": 96.5541,
+        "pinaw_testSet": 0.039939709,
+        "ACE_testSet": 0.065541,
+        "Winkler_testSet": 0.051128,
+        "PICP_piEvalSet": 91.6374,
+        "pinaw_piEvalSet": 0.0451883078
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 13,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1072.2,
+        "upper_limit": 1322.6,
+        "PICP_testSet": 99.3671,
+        "pinaw_testSet": 0.0629201978,
+        "ACE_testSet": 0.018671,
+        "Winkler_testSet": 0.076877,
+        "PICP_piEvalSet": 96.3457,
+        "pinaw_piEvalSet": 0.0725860447
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -983.2,
+        "upper_limit": 1022.6,
+        "PICP_testSet": 97.9606,
+        "pinaw_testSet": 0.052699212,
+        "ACE_testSet": 0.029606,
+        "Winkler_testSet": 0.069231,
+        "PICP_piEvalSet": 93.6051,
+        "pinaw_piEvalSet": 0.0594394617
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -803.7,
+        "upper_limit": 714.1,
+        "PICP_testSet": 95.429,
+        "pinaw_testSet": 0.0398788974,
+        "ACE_testSet": 0.05429,
+        "Winkler_testSet": 0.054023,
+        "PICP_piEvalSet": 90.0211,
+        "pinaw_piEvalSet": 0.0447874404
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 14,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1123.5,
+        "upper_limit": 1365.0,
+        "PICP_testSet": 99.2264,
+        "pinaw_testSet": 0.0653808117,
+        "ACE_testSet": 0.017264,
+        "Winkler_testSet": 0.080022,
+        "PICP_piEvalSet": 96.2052,
+        "pinaw_piEvalSet": 0.0749088824
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -981.1,
+        "upper_limit": 1042.3,
+        "PICP_testSet": 97.6793,
+        "pinaw_testSet": 0.0531622209,
+        "ACE_testSet": 0.026793,
+        "Winkler_testSet": 0.071892,
+        "PICP_piEvalSet": 93.324,
+        "pinaw_piEvalSet": 0.0602264181
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -827.9,
+        "upper_limit": 733.6,
+        "PICP_testSet": 95.1477,
+        "pinaw_testSet": 0.0410247445,
+        "ACE_testSet": 0.051477,
+        "Winkler_testSet": 0.056397,
+        "PICP_piEvalSet": 90.3022,
+        "pinaw_piEvalSet": 0.0461682528
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 15,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1083.5,
+        "upper_limit": 1287.7,
+        "PICP_testSet": 98.9451,
+        "pinaw_testSet": 0.0622990504,
+        "ACE_testSet": 0.014451,
+        "Winkler_testSet": 0.084903,
+        "PICP_piEvalSet": 95.2916,
+        "pinaw_piEvalSet": 0.0720368102
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -991.6,
+        "upper_limit": 1021.2,
+        "PICP_testSet": 97.2574,
+        "pinaw_testSet": 0.0528839976,
+        "ACE_testSet": 0.022574,
+        "Winkler_testSet": 0.074719,
+        "PICP_piEvalSet": 92.6212,
+        "pinaw_piEvalSet": 0.0599606186
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -818.1,
+        "upper_limit": 702.1,
+        "PICP_testSet": 93.038,
+        "pinaw_testSet": 0.0399413183,
+        "ACE_testSet": 0.03038,
+        "Winkler_testSet": 0.061164,
+        "PICP_piEvalSet": 88.194,
+        "pinaw_piEvalSet": 0.0448078886
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 16,
+    "model_type": "LSTM",
+    "input_window_size": 20,
+    "num_neurons": 8,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1136.1,
+        "upper_limit": 1316.8,
+        "PICP_testSet": 98.5935,
+        "pinaw_testSet": 0.0644439086,
+        "ACE_testSet": 0.010935,
+        "Winkler_testSet": 0.087174,
+        "PICP_piEvalSet": 95.3619,
+        "pinaw_piEvalSet": 0.0750328377
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -973.7,
+        "upper_limit": 1000.1,
+        "PICP_testSet": 96.4135,
+        "pinaw_testSet": 0.0518590137,
+        "ACE_testSet": 0.014135,
+        "Winkler_testSet": 0.079666,
+        "PICP_piEvalSet": 91.8482,
+        "pinaw_piEvalSet": 0.058899913
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -882.9,
+        "upper_limit": 723.6,
+        "PICP_testSet": 93.3193,
+        "pinaw_testSet": 0.0422084592,
+        "ACE_testSet": 0.033193,
+        "Winkler_testSet": 0.063723,
+        "PICP_piEvalSet": 88.5453,
+        "pinaw_piEvalSet": 0.0475079343
+      }
+    ],
+    "errors": []
+  }
+]

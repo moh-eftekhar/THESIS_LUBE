@@ -26,6 +26,7 @@ HOW TO RUN:
 """
 
 import os
+import json
 import pickle
 
 import torch
@@ -187,13 +188,17 @@ class LUBETester():
         split     = len(X_all) // 2
         X_pi_test = X_all[:split]
         y_pi_test = y_all[:split]
+        # Second 50% (PI-Val set) -- kept for JSON export
+        X_pi_val  = X_all[split:]
+        y_pi_val  = y_all[split:]
 
         if self.modelType != 'MLP':
             X_pi_test = X_pi_test.reshape(-1, self.input_window_size, 1)
+            X_pi_val  = X_pi_val.reshape(-1, self.input_window_size, 1)
 
         print(f"  PI-Test: {len(X_pi_test)} samples "
               f"(first 50% of test CSV -- {len(X_pi_test)*15/60:.0f} h)\n")
-        return X_pi_test, y_pi_test
+        return X_pi_test, y_pi_test, X_pi_val, y_pi_val
 
     # ── Predict ───────────────────────────────────────────────────────────────
     def _predict(self, model, X_pi_test, n_std_devs):
@@ -212,11 +217,15 @@ class LUBETester():
         return y_u, y_l
 
     # ── Compute metrics ───────────────────────────────────────────────────────
-    def _compute_metrics(self, y_u, y_l, y_true, alpha):
+    def _compute_metrics(self, y_u, y_l, y_true, alpha, scaler=None):
         """
         Computes PICP, MPIW, ACE, Winkler at two levels:
           OVERALL    -- averaged across all samples AND all 16 predicted steps.
           PER-HORIZON-- one value per forecast step (step 1 to step 16).
+
+        If scaler is provided, also returns per-step mean error bounds in raw Watts:
+          mean_lower_err_W[s] = mean( y_l_raw[:,s] - y_true_raw[:,s] )  (typically negative)
+          mean_upper_err_W[s] = mean( y_u_raw[:,s] - y_true_raw[:,s] )  (typically positive)
         """
         n_steps = y_true.shape[1]
 
@@ -236,6 +245,7 @@ class LUBETester():
 
         # Per-horizon metrics
         ph_picp, ph_mpiw, ph_ace, ph_winkler = [], [], [], []
+        ph_lower_err_w, ph_upper_err_w = [], []
         for s in range(n_steps):
             ku = np.maximum(0.0, np.sign(y_u[:, s] - y_true[:, s]))
             kl = np.maximum(0.0, np.sign(y_true[:, s] - y_l[:, s]))
@@ -252,7 +262,23 @@ class LUBETester():
             ph_ace.append(a)
             ph_winkler.append(float(np.mean(st)))
 
-        per_step = dict(picp=ph_picp, mpiw=ph_mpiw, ace=ph_ace, winkler=ph_winkler)
+            # Raw error bounds in Watts (vectorised inverse-scale)
+            if scaler is not None:
+                def _inv_col(col):
+                    return scaler.inverse_transform(col.reshape(-1, 1)).flatten()
+                mu_l_w    = float(np.mean(_inv_col(y_l[:, s])))
+                mu_u_w    = float(np.mean(_inv_col(y_u[:, s])))
+                mu_true_w = float(np.mean(_inv_col(y_true[:, s])))
+                ph_lower_err_w.append(round(mu_l_w - mu_true_w, 1))
+                ph_upper_err_w.append(round(mu_u_w - mu_true_w, 1))
+            else:
+                ph_lower_err_w.append(None)
+                ph_upper_err_w.append(None)
+
+        per_step = dict(
+            picp=ph_picp, mpiw=ph_mpiw, ace=ph_ace, winkler=ph_winkler,
+            lower_err_w=ph_lower_err_w, upper_err_w=ph_upper_err_w
+        )
         return overall, per_step
 
     # ── Print metrics table ───────────────────────────────────────────────────
@@ -452,23 +478,32 @@ class LUBETester():
         print(f"  Figures   : {self._fig_dir}")
         print(f"{'='*80}\n")
 
-        all_results = []
-        comparison  = []
+        all_results   = []
+        comparison    = []
+        json_by_alpha = {}   # keyed by alpha, value = (overall, per_step_test, per_step_val)
 
         for alpha in alphas:
             conf = int((1 - alpha) * 100)
             print(f"\n  -- Evaluating {conf}% PI ----------------------------------------")
 
-            model, scaler, n_std_devs = self._load_model(alpha)
-            X_pi_test, y_pi_test      = self._load_pi_test(scaler)
-            y_u, y_l                  = self._predict(model, X_pi_test, n_std_devs)
-            overall, per_step         = self._compute_metrics(y_u, y_l, y_pi_test, alpha)
+            model, scaler, n_std_devs           = self._load_model(alpha)
+            X_pi_test, y_pi_test, X_pi_val, y_pi_val = self._load_pi_test(scaler)
+
+            # ── PI-Test evaluation ────────────────────────────────────────────
+            y_u, y_l          = self._predict(model, X_pi_test, n_std_devs)
+            overall, per_step = self._compute_metrics(y_u, y_l, y_pi_test, alpha, scaler)
+
+            # ── PI-Val evaluation (for JSON export only, not printed) ─────────
+            y_u_val, y_l_val         = self._predict(model, X_pi_val, n_std_devs)
+            _, per_step_val          = self._compute_metrics(
+                y_u_val, y_l_val, y_pi_val, alpha, scaler)
 
             self._print_metrics(overall, per_step, alpha)
             self._plot(y_u, y_l, y_pi_test, overall, per_step, alpha)
 
             all_results.append((alpha, y_u, y_l, y_pi_test, overall, per_step))
             comparison.append((alpha, overall, per_step))
+            json_by_alpha[alpha] = (overall, per_step, per_step_val)
 
         # Side-by-side comparison if multiple alphas were evaluated
         if len(alphas) > 1:
@@ -486,7 +521,73 @@ class LUBETester():
                   f"{overall['ace']:>+9.4f}  {overall['winkler']:>10.4f}")
         print(f"{'='*80}\n")
 
+        # Export JSON results
+        self._save_json(json_by_alpha, alphas)
+
         return all_results
+
+    # ── Save JSON results (legacy-compatible format) ───────────────────────────
+    def _save_json(self, json_by_alpha, alphas):
+        """
+        Saves per-horizon, per-confidence metrics to a JSON file in the project
+        root directory, using a structure compatible with the legacy KDE output.
+
+        Fields per horizon step:
+          pred_hor             : forecast step (1 = +15 min, 16 = +4 h)
+          model_type           : LSTM / MLP
+          input_window_size    : window used
+          num_neurons          : hidden units
+          predicted_step       : total horizon steps
+          conf_interval[]:
+            confidence         : 0.975 / 0.95 / 0.90
+            lower_limit        : mean(y_l_Watts) - mean(y_true_Watts)  per step
+            upper_limit        : mean(y_u_Watts) - mean(y_true_Watts)  per step
+            PICP_testSet       : PICP on PI-Test set  (as %, 0-100)
+            pinaw_testSet      : MPIW on PI-Test set  (normalized, 0-1)
+            ACE_testSet        : ACE  on PI-Test set
+            Winkler_testSet    : Winkler score on PI-Test set
+            PICP_piEvalSet     : PICP on PI-Val set   (as %, 0-100)
+            pinaw_piEvalSet    : MPIW on PI-Val set   (normalized, 0-1)
+        """
+        n_steps = self.predicted_step
+        output  = []
+
+        for step_idx in range(n_steps):
+            conf_list = []
+            for alpha in sorted(alphas):          # 0.025 -> 0.05 -> 0.10
+                overall, ps_test, ps_val = json_by_alpha[alpha]
+                conf_entry = {
+                    'confidence'     : round(1 - alpha, 3),
+                    'lower_limit'    : ps_test['lower_err_w'][step_idx],
+                    'upper_limit'    : ps_test['upper_err_w'][step_idx],
+                    'PICP_testSet'   : round(ps_test['picp'][step_idx] * 100, 4),
+                    'pinaw_testSet'  : round(ps_test['mpiw'][step_idx], 10),
+                    'ACE_testSet'    : round(ps_test['ace'][step_idx], 6),
+                    'Winkler_testSet': round(ps_test['winkler'][step_idx], 6),
+                    'PICP_piEvalSet' : round(ps_val['picp'][step_idx] * 100, 4),
+                    'pinaw_piEvalSet': round(ps_val['mpiw'][step_idx], 10),
+                }
+                conf_list.append(conf_entry)
+
+            horizon_entry = {
+                'pred_hor'         : step_idx + 1,
+                'model_type'       : self.modelType,
+                'input_window_size': getattr(self, 'input_window_size', None),
+                'num_neurons'      : getattr(self, 'num_neurons', None),
+                'predicted_step'   : n_steps,
+                'conf_interval'    : conf_list,
+                'errors'           : [],
+            }
+            output.append(horizon_entry)
+
+        # Save to project root
+        base_dir  = os.path.dirname(os.path.abspath(__file__))
+        json_path = os.path.join(
+            base_dir, f'{self.dataset_name}_{self.modelType}_PI_results.json')
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(output, f, indent=2, ensure_ascii=False)
+
+        print(f"  JSON results saved -> {json_path}")
 
 
 # ── Run directly ──────────────────────────────────────────────────────────────

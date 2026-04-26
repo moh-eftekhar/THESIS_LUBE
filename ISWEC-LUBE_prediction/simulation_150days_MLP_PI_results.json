@@ -1,0 +1,690 @@
+[
+  {
+    "pred_hor": 1,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1071.7,
+        "upper_limit": 1429.6,
+        "PICP_testSet": 100.0,
+        "pinaw_testSet": 0.0657160506,
+        "ACE_testSet": 0.025,
+        "Winkler_testSet": 0.065716,
+        "PICP_piEvalSet": 99.6481,
+        "pinaw_piEvalSet": 0.0777369365
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -845.3,
+        "upper_limit": 1110.2,
+        "PICP_testSet": 99.8592,
+        "pinaw_testSet": 0.0513778999,
+        "ACE_testSet": 0.048592,
+        "Winkler_testSet": 0.051599,
+        "PICP_piEvalSet": 97.7481,
+        "pinaw_piEvalSet": 0.0587729514
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -826.6,
+        "upper_limit": 871.6,
+        "PICP_testSet": 99.1549,
+        "pinaw_testSet": 0.0446197279,
+        "ACE_testSet": 0.091549,
+        "Winkler_testSet": 0.04604,
+        "PICP_piEvalSet": 98.0296,
+        "pinaw_piEvalSet": 0.054086335
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 2,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1111.7,
+        "upper_limit": 1433.1,
+        "PICP_testSet": 99.9296,
+        "pinaw_testSet": 0.0668586716,
+        "ACE_testSet": 0.024296,
+        "Winkler_testSet": 0.067128,
+        "PICP_piEvalSet": 98.5222,
+        "pinaw_piEvalSet": 0.0785566494
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -704.5,
+        "upper_limit": 1230.0,
+        "PICP_testSet": 99.4366,
+        "pinaw_testSet": 0.0508269258,
+        "ACE_testSet": 0.044366,
+        "Winkler_testSet": 0.052052,
+        "PICP_piEvalSet": 97.1851,
+        "pinaw_piEvalSet": 0.0592254177
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -825.7,
+        "upper_limit": 999.8,
+        "PICP_testSet": 99.507,
+        "pinaw_testSet": 0.0479635112,
+        "ACE_testSet": 0.09507,
+        "Winkler_testSet": 0.048508,
+        "PICP_piEvalSet": 97.4666,
+        "pinaw_piEvalSet": 0.0543787815
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 3,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1201.8,
+        "upper_limit": 1499.2,
+        "PICP_testSet": 100.0,
+        "pinaw_testSet": 0.0709645748,
+        "ACE_testSet": 0.025,
+        "Winkler_testSet": 0.070965,
+        "PICP_piEvalSet": 100.0,
+        "pinaw_piEvalSet": 0.0942978561
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -781.8,
+        "upper_limit": 1222.5,
+        "PICP_testSet": 99.9296,
+        "pinaw_testSet": 0.0526584461,
+        "ACE_testSet": 0.049296,
+        "Winkler_testSet": 0.052703,
+        "PICP_piEvalSet": 99.0852,
+        "pinaw_piEvalSet": 0.0637757331
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -829.5,
+        "upper_limit": 882.4,
+        "PICP_testSet": 99.5775,
+        "pinaw_testSet": 0.0449775308,
+        "ACE_testSet": 0.095775,
+        "Winkler_testSet": 0.045971,
+        "PICP_piEvalSet": 98.3814,
+        "pinaw_piEvalSet": 0.0527767166
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 4,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1281.2,
+        "upper_limit": 1489.7,
+        "PICP_testSet": 99.8592,
+        "pinaw_testSet": 0.0728022605,
+        "ACE_testSet": 0.023592,
+        "Winkler_testSet": 0.073026,
+        "PICP_piEvalSet": 100.0,
+        "pinaw_piEvalSet": 0.0992993116
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -792.9,
+        "upper_limit": 1203.5,
+        "PICP_testSet": 99.7887,
+        "pinaw_testSet": 0.0524536334,
+        "ACE_testSet": 0.047887,
+        "Winkler_testSet": 0.052962,
+        "PICP_piEvalSet": 98.874,
+        "pinaw_piEvalSet": 0.0611074604
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -816.7,
+        "upper_limit": 821.9,
+        "PICP_testSet": 99.2958,
+        "pinaw_testSet": 0.0430529974,
+        "ACE_testSet": 0.092958,
+        "Winkler_testSet": 0.043763,
+        "PICP_piEvalSet": 97.1147,
+        "pinaw_piEvalSet": 0.04916263
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 5,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1286.1,
+        "upper_limit": 1381.3,
+        "PICP_testSet": 99.8592,
+        "pinaw_testSet": 0.0700816512,
+        "ACE_testSet": 0.023592,
+        "Winkler_testSet": 0.070695,
+        "PICP_piEvalSet": 100.0,
+        "pinaw_piEvalSet": 0.0946830958
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -772.2,
+        "upper_limit": 1296.0,
+        "PICP_testSet": 100.0,
+        "pinaw_testSet": 0.0543375686,
+        "ACE_testSet": 0.05,
+        "Winkler_testSet": 0.054338,
+        "PICP_piEvalSet": 99.5778,
+        "pinaw_piEvalSet": 0.0650054142
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -849.7,
+        "upper_limit": 786.1,
+        "PICP_testSet": 99.0845,
+        "pinaw_testSet": 0.0429771654,
+        "ACE_testSet": 0.090845,
+        "Winkler_testSet": 0.045053,
+        "PICP_piEvalSet": 97.5369,
+        "pinaw_piEvalSet": 0.0516621023
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 6,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -847.6,
+        "upper_limit": 1487.1,
+        "PICP_testSet": 99.7183,
+        "pinaw_testSet": 0.061340645,
+        "ACE_testSet": 0.022183,
+        "Winkler_testSet": 0.062602,
+        "PICP_piEvalSet": 99.9296,
+        "pinaw_piEvalSet": 0.0845299736
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -832.3,
+        "upper_limit": 1255.1,
+        "PICP_testSet": 99.1549,
+        "pinaw_testSet": 0.054841809,
+        "ACE_testSet": 0.041549,
+        "Winkler_testSet": 0.058428,
+        "PICP_piEvalSet": 97.6777,
+        "pinaw_piEvalSet": 0.0661079213
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -875.8,
+        "upper_limit": 831.8,
+        "PICP_testSet": 99.7183,
+        "pinaw_testSet": 0.0448650345,
+        "ACE_testSet": 0.097183,
+        "Winkler_testSet": 0.046281,
+        "PICP_piEvalSet": 97.6073,
+        "pinaw_piEvalSet": 0.0556118228
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 7,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1217.7,
+        "upper_limit": 1316.7,
+        "PICP_testSet": 99.6479,
+        "pinaw_testSet": 0.0665856153,
+        "ACE_testSet": 0.021479,
+        "Winkler_testSet": 0.071979,
+        "PICP_piEvalSet": 98.311,
+        "pinaw_piEvalSet": 0.0798048079
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -817.5,
+        "upper_limit": 1318.9,
+        "PICP_testSet": 99.6479,
+        "pinaw_testSet": 0.0561294109,
+        "ACE_testSet": 0.046479,
+        "Winkler_testSet": 0.057345,
+        "PICP_piEvalSet": 99.2963,
+        "pinaw_piEvalSet": 0.0696816593
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -886.0,
+        "upper_limit": 909.0,
+        "PICP_testSet": 99.0845,
+        "pinaw_testSet": 0.0471611992,
+        "ACE_testSet": 0.090845,
+        "Winkler_testSet": 0.049853,
+        "PICP_piEvalSet": 97.8888,
+        "pinaw_piEvalSet": 0.0608195737
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 8,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1272.0,
+        "upper_limit": 1267.4,
+        "PICP_testSet": 99.1549,
+        "pinaw_testSet": 0.0667177513,
+        "ACE_testSet": 0.016549,
+        "Winkler_testSet": 0.081128,
+        "PICP_piEvalSet": 98.3814,
+        "pinaw_piEvalSet": 0.0855559036
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -887.0,
+        "upper_limit": 1148.2,
+        "PICP_testSet": 99.1549,
+        "pinaw_testSet": 0.0534720197,
+        "ACE_testSet": 0.041549,
+        "Winkler_testSet": 0.057328,
+        "PICP_piEvalSet": 96.6925,
+        "pinaw_piEvalSet": 0.059679959
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -976.4,
+        "upper_limit": 903.9,
+        "PICP_testSet": 98.9437,
+        "pinaw_testSet": 0.0494023673,
+        "ACE_testSet": 0.089437,
+        "Winkler_testSet": 0.053169,
+        "PICP_piEvalSet": 98.0999,
+        "pinaw_piEvalSet": 0.0616740026
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 9,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1221.8,
+        "upper_limit": 1306.5,
+        "PICP_testSet": 99.1549,
+        "pinaw_testSet": 0.0664273947,
+        "ACE_testSet": 0.016549,
+        "Winkler_testSet": 0.078536,
+        "PICP_piEvalSet": 97.3962,
+        "pinaw_piEvalSet": 0.0770457834
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -901.9,
+        "upper_limit": 1208.3,
+        "PICP_testSet": 99.0141,
+        "pinaw_testSet": 0.0554427877,
+        "ACE_testSet": 0.040141,
+        "Winkler_testSet": 0.061253,
+        "PICP_piEvalSet": 96.974,
+        "pinaw_piEvalSet": 0.0641188994
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -831.8,
+        "upper_limit": 902.6,
+        "PICP_testSet": 97.5352,
+        "pinaw_testSet": 0.0455690995,
+        "ACE_testSet": 0.075352,
+        "Winkler_testSet": 0.052958,
+        "PICP_piEvalSet": 93.8776,
+        "pinaw_piEvalSet": 0.0537570678
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 10,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1320.9,
+        "upper_limit": 1354.0,
+        "PICP_testSet": 98.9437,
+        "pinaw_testSet": 0.0702782571,
+        "ACE_testSet": 0.014437,
+        "Winkler_testSet": 0.086827,
+        "PICP_piEvalSet": 97.8184,
+        "pinaw_piEvalSet": 0.08325468
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -909.0,
+        "upper_limit": 1202.5,
+        "PICP_testSet": 98.8732,
+        "pinaw_testSet": 0.0554748364,
+        "ACE_testSet": 0.038732,
+        "Winkler_testSet": 0.066942,
+        "PICP_piEvalSet": 96.6221,
+        "pinaw_piEvalSet": 0.0650479198
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -1043.8,
+        "upper_limit": 523.2,
+        "PICP_testSet": 92.1831,
+        "pinaw_testSet": 0.0413212515,
+        "ACE_testSet": 0.021831,
+        "Winkler_testSet": 0.139654,
+        "PICP_piEvalSet": 84.7291,
+        "pinaw_piEvalSet": 0.049689088
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 11,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1237.3,
+        "upper_limit": 1348.8,
+        "PICP_testSet": 98.9437,
+        "pinaw_testSet": 0.0679452196,
+        "ACE_testSet": 0.014437,
+        "Winkler_testSet": 0.082583,
+        "PICP_piEvalSet": 97.6777,
+        "pinaw_piEvalSet": 0.0811321661
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -831.7,
+        "upper_limit": 1150.1,
+        "PICP_testSet": 98.5915,
+        "pinaw_testSet": 0.0520678014,
+        "ACE_testSet": 0.035915,
+        "Winkler_testSet": 0.061642,
+        "PICP_piEvalSet": 95.3554,
+        "pinaw_piEvalSet": 0.0576415733
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -963.3,
+        "upper_limit": 816.5,
+        "PICP_testSet": 96.831,
+        "pinaw_testSet": 0.0467598066,
+        "ACE_testSet": 0.06831,
+        "Winkler_testSet": 0.056372,
+        "PICP_piEvalSet": 92.7516,
+        "pinaw_piEvalSet": 0.0535492226
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 12,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1156.8,
+        "upper_limit": 1383.9,
+        "PICP_testSet": 99.0141,
+        "pinaw_testSet": 0.0667503998,
+        "ACE_testSet": 0.015141,
+        "Winkler_testSet": 0.085113,
+        "PICP_piEvalSet": 98.0296,
+        "pinaw_piEvalSet": 0.0829193518
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -894.8,
+        "upper_limit": 1282.8,
+        "PICP_testSet": 98.7324,
+        "pinaw_testSet": 0.0572119765,
+        "ACE_testSet": 0.037324,
+        "Winkler_testSet": 0.067484,
+        "PICP_piEvalSet": 96.7628,
+        "pinaw_piEvalSet": 0.0676056221
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -621.8,
+        "upper_limit": 636.2,
+        "PICP_testSet": 91.1268,
+        "pinaw_testSet": 0.0491762199,
+        "ACE_testSet": 0.011268,
+        "Winkler_testSet": 0.227851,
+        "PICP_piEvalSet": 81.4919,
+        "pinaw_piEvalSet": 0.1278242171
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 13,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1146.0,
+        "upper_limit": 1361.4,
+        "PICP_testSet": 98.9437,
+        "pinaw_testSet": 0.0658784583,
+        "ACE_testSet": 0.014437,
+        "Winkler_testSet": 0.088028,
+        "PICP_piEvalSet": 97.3962,
+        "pinaw_piEvalSet": 0.0846295059
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -873.0,
+        "upper_limit": 1214.0,
+        "PICP_testSet": 98.5915,
+        "pinaw_testSet": 0.0548311956,
+        "ACE_testSet": 0.035915,
+        "Winkler_testSet": 0.068695,
+        "PICP_piEvalSet": 95.2146,
+        "pinaw_piEvalSet": 0.0596372858
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -949.2,
+        "upper_limit": 890.2,
+        "PICP_testSet": 95.9859,
+        "pinaw_testSet": 0.0483275503,
+        "ACE_testSet": 0.059859,
+        "Winkler_testSet": 0.061509,
+        "PICP_piEvalSet": 91.7664,
+        "pinaw_piEvalSet": 0.0546218008
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 14,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1228.0,
+        "upper_limit": 1422.8,
+        "PICP_testSet": 98.8732,
+        "pinaw_testSet": 0.0696428791,
+        "ACE_testSet": 0.013732,
+        "Winkler_testSet": 0.093126,
+        "PICP_piEvalSet": 97.2555,
+        "pinaw_piEvalSet": 0.0877641067
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -905.9,
+        "upper_limit": 1156.5,
+        "PICP_testSet": 98.662,
+        "pinaw_testSet": 0.0541876145,
+        "ACE_testSet": 0.03662,
+        "Winkler_testSet": 0.067294,
+        "PICP_piEvalSet": 95.5665,
+        "pinaw_piEvalSet": 0.0651385486
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -966.8,
+        "upper_limit": 967.2,
+        "PICP_testSet": 95.2113,
+        "pinaw_testSet": 0.0508111231,
+        "ACE_testSet": 0.052113,
+        "Winkler_testSet": 0.074852,
+        "PICP_piEvalSet": 88.5996,
+        "pinaw_piEvalSet": 0.0605810657
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 15,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1322.6,
+        "upper_limit": 1411.5,
+        "PICP_testSet": 98.9437,
+        "pinaw_testSet": 0.0718327165,
+        "ACE_testSet": 0.014437,
+        "Winkler_testSet": 0.102049,
+        "PICP_piEvalSet": 96.411,
+        "pinaw_piEvalSet": 0.0880069211
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -995.1,
+        "upper_limit": 1235.2,
+        "PICP_testSet": 98.4507,
+        "pinaw_testSet": 0.0585963391,
+        "ACE_testSet": 0.034507,
+        "Winkler_testSet": 0.072822,
+        "PICP_piEvalSet": 96.7628,
+        "pinaw_piEvalSet": 0.0762371644
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -867.3,
+        "upper_limit": 802.6,
+        "PICP_testSet": 92.1831,
+        "pinaw_testSet": 0.0512406044,
+        "ACE_testSet": 0.021831,
+        "Winkler_testSet": 0.143595,
+        "PICP_piEvalSet": 84.0957,
+        "pinaw_piEvalSet": 0.1210142449
+      }
+    ],
+    "errors": []
+  },
+  {
+    "pred_hor": 16,
+    "model_type": "MLP",
+    "input_window_size": 24,
+    "num_neurons": 32,
+    "predicted_step": 16,
+    "conf_interval": [
+      {
+        "confidence": 0.975,
+        "lower_limit": -1388.3,
+        "upper_limit": 1315.1,
+        "PICP_testSet": 98.0282,
+        "pinaw_testSet": 0.0710258484,
+        "ACE_testSet": 0.005282,
+        "Winkler_testSet": 0.103558,
+        "PICP_piEvalSet": 95.7072,
+        "pinaw_piEvalSet": 0.0877154097
+      },
+      {
+        "confidence": 0.95,
+        "lower_limit": -938.1,
+        "upper_limit": 1222.8,
+        "PICP_testSet": 98.169,
+        "pinaw_testSet": 0.0567734502,
+        "ACE_testSet": 0.03169,
+        "Winkler_testSet": 0.073329,
+        "PICP_piEvalSet": 93.5961,
+        "pinaw_piEvalSet": 0.0685408786
+      },
+      {
+        "confidence": 0.9,
+        "lower_limit": -1026.2,
+        "upper_limit": 827.7,
+        "PICP_testSet": 94.8592,
+        "pinaw_testSet": 0.0487078242,
+        "ACE_testSet": 0.048592,
+        "Winkler_testSet": 0.068331,
+        "PICP_piEvalSet": 91.4145,
+        "pinaw_piEvalSet": 0.0590919331
+      }
+    ],
+    "errors": []
+  }
+]
